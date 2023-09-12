@@ -1,0 +1,56 @@
+2.Greatest of three numbers
+
+#include <stdio.h>
+
+int main() {
+    int a,b,c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&a, &b, &c);
+    if(a>b)
+    {
+        if(a>c)
+        {
+            printf("%d is greator",a);
+            
+        }
+        else {
+            printf("%d is greator", c);
+        }
+    }
+    else if(b>c)
+    {
+            printf("%d is greator",b);
+    }
+    else
+    {
+            printf("%d is greator",c);
+    }
+    
+    return 0;
+}
+
+orrrrr using logical operators
+
+#include <stdio.h>
+
+int main() {
+    int a,b,c;
+    printf("Enter three numbers: ");
+    scanf("%d%d%d",&a, &b, &c);
+    if(a>b && a>c)
+    {
+            printf("%d is greator",a);
+            
+    }
+    else if(b>a && b>c)
+    {
+            printf("%d is greator", b);
+    
+    }
+    else
+    {
+            printf("%d is greator",c);
+    }
+    
+    return 0;
+}

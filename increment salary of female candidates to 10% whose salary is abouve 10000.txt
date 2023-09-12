@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include<string.h>
+
+int main() {
+    int salary,value;
+    char gender[20];
+    char e_name[20];
+    printf("Please enter your name:");
+    scanf("%s",&e_name);
+    printf("Enter the gender as 'female' or 'male:");
+    scanf("%s",&gender);
+    printf("Enter the salary:");
+    scanf("%d",&salary);
+    
+    value = strcmp(gender,"female");
+    
+    if(value == 0)
+    {
+    if(salary>=10000)
+        {
+            salary+=salary*10/100;
+            printf("Salary of %s is incremented to %d",e_name,salary);
+        }
+        else {
+            printf("Salary of %s is not incremented",e_name);
+        }
+    }
+    else {
+        printf("Sorry salary of only female candidates are incremented!!");
+    }
+    
+    return 0;
+}

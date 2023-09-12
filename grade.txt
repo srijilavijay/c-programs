@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+int main() {
+    int total;
+    float avg;
+    printf("Enter The Total Marks:");
+    scanf("%d",&total);
+    avg = total/5;
+    if(avg>=80 && avg<=100)
+    {
+        printf("Grade A");
+    }
+    else if(avg>=70 && avg<=79)
+    {
+        printf("Grade B");
+    }
+    else if(avg>=60 && avg<=69)
+    {
+        printf("Grade c");
+    }
+    else if(avg>=50 && avg<=59)
+    {
+        printf("Grade D");
+    }
+    else 
+    {
+        printf("Grade E");
+    }
+    return 0;
+}
+
+using switch
+
+#include <stdio.h>
+
+int main() {
+    int total;
+    int avg;
+    printf("Enter The Total Marks:\n");
+    scanf("%d",&total);
+    avg = total/5;
+    if(total<=500) 
+    {
+        switch(avg/10) 
+        {
+            case 10:
+            case 9: printf("Grade A+");
+                        break;
+            case 8: printf("Grade A");
+                        break;
+            case 7: printf("Grade B");
+                        break;
+            case 6: printf("Grade C");
+                        break;    
+            case 5: printf("Grade D");
+                        break;  
+            default: printf("Grade E");
+                        break;
+        }
+    }
+    else 
+    {
+        printf("Total mark you entered exceeded the limit!! Re-enter total marks");
+    }
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include<stdio.h>
+void sum();
+void main()
+{
+    printf("Calculating sum of two numbers");
+    sum();
+}
+
+void sum()
+{
+    int a,b;
+    printf("Calculating sum of tow numbers");
+    printf("\nEnter two numbers:");
+    scanf("%d%d",&a,&b);
+    printf("%d",a+b);
+}
