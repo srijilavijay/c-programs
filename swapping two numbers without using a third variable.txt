@@ -1,0 +1,33 @@
+Q. Program in c to swap 2 numbers without using a third variable
+
+
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    printf("Enter two number to be swapped: ");
+    scanf("%d%d", &a, &b);
+    printf("\nThe numbers before swapping are a=%d and b=%d", a,b);
+    a = a+b;
+    b = a-b;
+    a=a-b;
+    printf("\nThe swapped values are a=%d and b=%d", a,b);
+    return 0;
+}
+
+or
+
+
+#include <stdio.h>
+
+int main() {
+    int a,b;
+    printf("Enter two number to be swapped: ");
+    scanf("%d%d", &a, &b);
+    printf("\nThe numbers before swapping are a=%d and b=%d", a,b);
+    a = a*b;
+    b = a/b;
+    a=a/b;
+    printf("\nThe swapped values are a=%d and b=%d", a,b);
+    return 0;
+}
