@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int a[10] = {10,9,8,7,6,5,4,3,2,1};
+    int i, j, temp;
+    printf("The array before sort is :\n");
+    for(int i=0; i<=9; i++)
+    {
+        printf("%d ", a[i]);
+    }
+    for( i=0; i<=9; i++)
+    {
+        for(j=i+1; j<=9; j++)
+        {
+            temp = a[i];
+            a[i]=a[j];
+            a[j]=temp;
+        }
+    }
+    printf("\nSorted array is :\n");
+    for(int i=0; i<=9; i++)
+    {
+        printf("%d ", a[i]);
+    }
+    return 0;
+}
