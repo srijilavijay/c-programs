@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main() 
+{
+   char str[20] = {'h', 'e', 'l', 'l', 'o', '\0' };
+   printf("The character array valuse is %s",str);
+   return 0;
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include<string.h>
+
+int main() 
+{
+   char str[] = "hello";
+   char str1[] = "welcome";
+   printf("First string and Second String before copying are '%s' and '%s'\n", str, str1);
+   strcpy(str1 , str);
+   printf("First string and Second String after copying are '%s' and '%s'", str, str1);
+   return 0;
+}

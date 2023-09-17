@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main() 
+{
+   char str[] = "hello";
+   printf("The string literal value is %s",str);
+   return 0;
+}

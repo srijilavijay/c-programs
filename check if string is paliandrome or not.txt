@@ -1,0 +1,36 @@
+#include<stdio.h>  
+#include <string.h>    
+
+void paliandromeCheck(char *);
+
+int main()
+{    
+  char str[20], str1[20];    
+  printf("Enter the string to check :  ");    
+  scanf("%s", str); 
+  strcpy(str1, str);
+  paliandromeCheck(str);
+  printf("\n reversed string is %s", str);
+  if(strcmp(str1,str) == 0)
+  {
+      printf("\nString is Paliandrome..!!");
+  }
+  else
+  {
+      printf("\nString is not Paliandrome..!!");
+  }
+   return 0;
+} 
+
+void paliandromeCheck(char str[]) 
+{
+    int length = strlen(str);
+    int i, j;
+    char temp;
+    for( i=0, j = length-1; i<j; i++, j--)
+    {
+        temp = str[i];
+        str[i] = str[j];
+        str[j] = temp;
+    }
+}

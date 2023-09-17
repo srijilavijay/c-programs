@@ -1,0 +1,32 @@
+c program to print left half star pyramid
+
+    *
+   **
+  ***
+ ****
+*****
+
+
+#include <stdio.h>
+
+int main() {
+    int i,j,k,n;
+    printf("Enter the Limit: ");
+    scanf("%d",&n);
+    //i loop for printing new line
+    for(i=1; i<=n; i++)
+    {
+        printf("\n");
+        //j loop for printing space
+        for(j=5; j>i; j--)
+        {
+            printf(" ");
+        }
+        //k loop for printing star
+        for(k=1; k<=i; k++)
+        {
+            printf("*");
+        }
+    }
+    return 0;
+}
