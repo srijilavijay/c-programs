@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int main() {
+    int arr[50], n, temp, largest, s_largest;
+    printf("Enter the array size: ");
+    scanf("%d", &n);
+    printf("\nEnter the array elements: ");
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    printf("\nThe array elements are: ");
+    for(int i=0; i<n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    for(int i=0; i<n; i++)
+    {
+        for(int j=i+1; j<=n; j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    printf("\nThe sorted array elements are: ");
+    for(int i=0; i<n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+     printf("\n The largest element is %d and second largest element is %d", arr[n-1],arr[n-2]);
+    return 0;
+}
+
+
+or
+
+#include<stdio.h>  
+
+void main ()  
+{  
+    int arr[100],i,n,largest,sec_largest;  
+    
+    printf("Enter five  elements: ");  
+    for(i = 0; i<5; i++)  
+    {  
+        scanf("%d",&arr[i]);  
+    }  
+    largest = arr[0];  
+    sec_largest = arr[1];  
+    for(i=0;i<5;i++)  
+    {  
+        if(arr[i]>largest)  
+        {  
+            sec_largest = largest;  
+            largest = arr[i];  
+        }  
+        else if (arr[i]>sec_largest && arr[i]!=largest)  
+        {  
+            sec_largest=arr[i];  
+        }  
+    }  
+    printf("largest = %d, second largest = %d",largest,sec_largest);  
+}
