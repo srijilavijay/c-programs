@@ -1,0 +1,32 @@
+Q. C Program to print reverse full Star Pyramid
+
+*********
+ *******
+  *****
+   ***
+    *
+
+#include <stdio.h>
+
+int main() {
+    int i,j,k,n;
+    printf("\n Enter the limit:");
+    scanf("%d",&n);
+      for (int i = n; i >= 1; --i) 
+   {
+      for (j = 0; j < n - i; ++j)
+      {
+         printf("  ");
+      }
+      for (int k = i; k <= 2 * i - 1; ++k)
+      {
+         printf("* ");
+      }
+      for (int j = 0; j < i - 1; ++j)
+      {
+         printf("* ");
+      }
+      printf("\n");
+   }
+    return 0;
+}

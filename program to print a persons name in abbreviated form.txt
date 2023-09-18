@@ -1,0 +1,10 @@
+#include<stdio.h>
+
+int main() 
+{
+  char str[20], str1[20], str2[20];
+  printf("Enter Your First Name, Middle Name and Last Name :");
+  scanf("%s%s%s", str,str1,str2);
+  printf("\nYour Abbreviated Name is : %c.%c.%s ", str[0], str1[0], str2);
+  return 0;
+}
