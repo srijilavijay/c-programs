@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <ctype.h>
+
+void stringToLower(char str[]) 
+{
+    int i=0;
+    while(str[i])
+    {
+        str[i] = tolower((unsigned char)(str[i]));
+        i++;
+    }
+}
+
+int main() 
+{
+    char str[50];
+    printf("\nEnter the string to lowercase: ");
+    scanf("%s", str);
+    stringToLower(str);
+    printf("\nThe lowercased string is: %s",str);
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <ctype.h>
+
+void stringToUpper(char str[]) 
+{
+    int i=0;
+    while(str[i])
+    {
+        str[i] = toupper((unsigned char)(str[i]));
+        i++;
+    }
+}
+
+int main() 
+{
+    char str[50];
+    printf("\nEnter the string to uppercase: ");
+    scanf("%s", str);
+    stringToUpper(str);
+    printf("\nThe uppercased string is: %s",str);
+    return 0;
+}
