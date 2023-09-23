@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+int findElement(int arr[], int n, int key);
+
+int deleteElement(int arr[], int n, int key)
+{
+    //finding position of the element
+    int pos = findElement(arr, n, key);
+    if(pos == -1)
+    {
+        printf("\nElement not found!!");
+        return n;
+    }
+    //deleting Element
+    int i;
+    for( i=pos; i < n-1; i++)
+        arr[i] =arr[i+1];
+    return n-1;
+    
+}
+
+int findElement(int arr[], int n, int key)
+{   
+    
+    int i;
+    for(i=0; i<n; i++)
+    {
+        if(arr[i] == key)
+        return i;
+    }
+    return -1;
+}
+
+int main()
+{
+    int arr[] = {30, 20, 40, 50, 10};
+    
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int key = 30;
+    
+    printf("\nArray before insertion: ");
+    for(int i=0; i<n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    n = deleteElement(arr, n, key);
+    
+    printf("\nArray after insertion: ");
+    for(int i=0; i<n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+    
+}

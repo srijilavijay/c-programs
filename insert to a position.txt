@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+int insertSorted(int arr[], int n, int x, int position)
+{
+
+    int i;
+    for (i = (n-1); (i>= position); i--)
+        arr[i+1] = arr[i];
+    arr[position] = x;
+    
+}
+
+int main()
+{
+    int arr[15] = {34, 55, 23, 54, 87, 99};
+    int n = 6;
+    
+    
+    printf("\nArray before insertion: ");
+    for(int i=0; i<n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    int x=46, position =3;
+    insertSorted(arr, n, x, position);
+    n++;
+    printf("\nArray after insertion: ");
+    for(int i=0; i<n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+    
+}
